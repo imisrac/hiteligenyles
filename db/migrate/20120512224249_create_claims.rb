@@ -3,7 +3,7 @@ class CreateClaims < ActiveRecord::Migration
     create_table :claims do |t|
       t.string :name
       t.string :mothersname
-      t.integer :age
+      t.integer :birth
       t.integer :salary
       t.integer :claimmoney
       t.integer :duration

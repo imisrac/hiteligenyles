@@ -1,3 +1,31 @@
-<% provide(:title, 'Adatok rogzitese') %>
-<h1>Claims#new</h1>
-<p>Find me in app/views/claims/new.html.erb</p>
+<%= provide(:title, 'Adatok rogzitese') %>
+<h1>Adatok rögzítése</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@claim) do |f| %>
+        <%= render 'shared/error_messages' %>
+
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+
+        <%= f.label :mothersname %>
+        <%= f.text_field :mothersname %>
+
+        <%= f.label :birth %>
+        <%= f.date_select :birth, :start_year => Time.now.year - 100,
+                          :end_year => Time.now.year %>
+
+        <%= f.label :salary %>
+        <%= f.text_field :salary %>
+
+        <%= f.label :claimmoney %>
+        <%= f.text_field :claimmoney %>
+
+        <%= f.label :duration %>
+        <%= f.text_field :duration %>
+
+        <%= f.submit "OK", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120512214249) do
+ActiveRecord::Schema.define(:version => 20120512224249) do
 
   create_table "claims", :force => true do |t|
     t.string   "name"
     t.string   "mothersname"
-    t.integer  "age"
+    t.integer  "birth"
     t.integer  "salary"
     t.integer  "claimmoney"
     t.integer  "duration"

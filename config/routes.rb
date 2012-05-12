@@ -1,4 +1,6 @@
 Hiteligenyles::Application.routes.draw do
+  resources :claims
+
   get "claims/new"
 
   root to: 'static_pages#home'

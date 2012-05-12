@@ -2,13 +2,13 @@ require 'spec_helper'
 
 describe Claim do
 
-  before { @claim = Claim.new(name: "Example User", mothersname: "Mother of Example", age: 20, salary: 200000, claimmoney: 10000000, duration: 120) }
+  before { @claim = Claim.new(name: "Example User", mothersname: "Mother of Example", birth: 20, salary: 200000, claimmoney: 10000000, duration: 120) }
 
   subject { @claim }
 
   it { should respond_to(:name) }
   it { should respond_to(:mothersname) }
-  it {should respond_to(:age)}
+  it {should respond_to(:birth)}
   it {should respond_to(:salary)}
   it {should respond_to(:claimmoney)}
   it {should respond_to(:duration)}
@@ -25,8 +25,8 @@ describe Claim do
     it { should_not be_valid }
   end
 
-  describe "when age is not present" do
-    before { @claim.age = nil }
+  describe "when birth is not present" do
+    before { @claim.birth = nil }
     it { should_not be_valid }
   end
 
