@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ad4aa35f-458c-47e6-90ee-5e9fb095762e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/claims_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/claims_controller.rb" />
     </list>
     <ignored path="hiteligenyles.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -854,7 +853,11 @@
       <created>1336866301340</created>
       <updated>1336866301340</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add SSL in production.">
+      <created>1336866636753</created>
+      <updated>1336866636753</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
