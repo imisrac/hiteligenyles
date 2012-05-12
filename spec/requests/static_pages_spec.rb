@@ -1,51 +1,28 @@
 require 'spec_helper'
 
 describe "Static pages" do
+  subject { page }
 
   describe "Home page" do
+    before { visit root_path }
 
-    it "should have the h1 'Bankinfo projekt'" do
-      visit '/static_pages/home'
-      page.should have_selector('h1', :text => 'Bankinfo projekt')
-    end
+    it { should have_selector('title',
+                              :text => full_title('')) }
 
-    it "should have the base title" do
-      visit '/static_pages/home'
-      page.should have_selector('title',
-                                :text => "Bankinfo projekt")
-    end
-
-    it "should not have a custom page title" do
-      visit '/static_pages/home'
-      page.should_not have_selector('title', :text => '| Kezdo oldal')
-    end
+    it { should_not have_selector('title', :text => full_title('Kezdo oldal')) }
   end
 
   describe "Help page" do
+    before { visit help_path }
 
-    it "should have the h1 'Segitseg'" do
-      visit '/static_pages/help'
-      page.should have_selector('h1', :text => 'Segitseg')
-    end
-
-    it "should have the title 'Help'" do
-      visit '/static_pages/help'
-      page.should have_selector('title',
-                                :text => "Bankinfo projekt | Segitseg")
-    end
+    it { should have_selector('title',
+                              :text => full_title('Segitseg')) }
   end
 
   describe "About page" do
+    before { visit about_path }
 
-    it "should have the h1 'Rolunk'" do
-      visit '/static_pages/about'
-      page.should have_selector('h1', :text => 'Rolunk')
-    end
-
-    it "should have the title 'About Us'" do
-      visit '/static_pages/about'
-      page.should have_selector('title',
-                                :text => "Bankinfo projekt | Rolunk")
-    end
+    it { should have_selector('title',
+                              :text => full_title('Rolunk')) }
   end
 end

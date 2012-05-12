@@ -1,0 +1,72 @@
+@import "bootstrap";
+
+$backgoundcol: #155228;
+$contentcol: #00632F;
+$textcol: #C5894E;
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 30px;
+  background-color: $backgoundcol;
+  color: $textcol;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+    color: $textcol;
+  }
+}
+
+.hero-unit {
+  background-color: $contentcol;
+}
+
+.nav-tabs {
+  background-color: $contentcol;
+  width: 170px;
+  li a {
+    color: #F6BA1E;
+  }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
