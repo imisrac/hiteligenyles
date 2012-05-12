@@ -9,6 +9,7 @@ gem 'bootstrap-sass'
 group :development do
   gem 'mysql2'
   gem 'rspec-rails'
+  gem 'annotate'
 end
 
 
