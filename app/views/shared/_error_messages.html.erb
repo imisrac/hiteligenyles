@@ -1,0 +1,12 @@
+<% if @claim.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-error">
+        The form contains <%= pluralize(@claim.errors.count, "error") %>.
+      </div>
+      <ul>
+        <% @claim.errors.full_messages.each do |msg| %>
+            <li>* <%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
