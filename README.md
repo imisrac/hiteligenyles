@@ -1,0 +1,1 @@
+This is a sample application for a course of my University. It focuses a secure credit claim.
