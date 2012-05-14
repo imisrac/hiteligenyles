@@ -1,0 +1,41 @@
+<%= provide(:title, "Jelzalog") %>
+<h1>Jelzálog</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@mortgage) do |f| %>
+        <%= render 'shared/error_messages' %>
+
+        <%= f.label :postcode, "Irányítószám" %>
+        <%= f.text_field :postcode %>
+
+        <%= f.label :city, "Város" %>
+        <%= f.text_field :city %>
+
+        <%= f.label :number, "Házszám" %>
+        <%= f.text_field :number %>
+
+        <%= f.label :floor, "Emelet" %>
+        <%= f.text_field :floor %>
+
+        <%= f.label :door, "Ajtó" %>
+        <%= f.text_field :door %>
+
+        <%= f.label :value, "Ingatlan értéke" %>
+        <%= f.text_field :value %>
+
+        <%= f.label :addincome, "Ingatlan bevételek" %>
+        <%= f.text_field :addincome %>
+
+        <%= f.label :addexpense, "Ingatlan kiadások" %>
+        <%= f.text_field :addexpense %>
+
+        <%= f.label :housemortgage, "Lakáscélú?" %>
+        <%= f.check_box :housemortgage %>
+
+        </br>
+
+        <%= f.submit "OK", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

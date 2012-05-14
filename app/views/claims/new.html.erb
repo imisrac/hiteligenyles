@@ -6,24 +6,29 @@
     <%= form_for(@claim) do |f| %>
         <%= render 'shared/error_messages' %>
 
-        <%= f.label :name %>
+        <%= f.label :name, "Név" %>
         <%= f.text_field :name %>
 
-        <%= f.label :mothersname %>
+        <%= f.label :mothersname, "Anyja neve" %>
         <%= f.text_field :mothersname %>
 
-        <%= f.label :birth %>
+        <%= f.label :birth, "Születés" %>
         <%= f.date_select :birth, :start_year => Time.now.year - 100,
                           :end_year => Time.now.year %>
 
-        <%= f.label :salary %>
+        <%= f.label :salary, "Fizetés(havi)" %>
         <%= f.text_field :salary %>
 
-        <%= f.label :claimmoney %>
+        <%= f.label :claimmoney, "Igényelt összeg" %>
         <%= f.text_field :claimmoney %>
 
-        <%= f.label :duration %>
+        <%= f.label :duration, "Futamidő" %>
         <%= f.text_field :duration %>
+
+        <%= f.label :mortgage, "Jelzálog?" %>
+        <%= f.check_box :mortgage %>
+
+        </br>
 
         <%= f.submit "OK", class: "btn btn-large btn-primary" %>
     <% end %>

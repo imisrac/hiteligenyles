@@ -1,7 +1,9 @@
 Hiteligenyles::Application.routes.draw do
-  resources :claims
+  get "mortgages/new"
 
-  get "claims/new"
+  get "mortgages/confirm"
+
+  resources :claims
 
   root to: 'static_pages#home'
 
@@ -10,6 +12,8 @@ Hiteligenyles::Application.routes.draw do
   match '/about', to: 'static_pages#about'
 
   match '/commonform', to: 'claims#new'
+
+  match '/mortgageform', to: 'mortgages#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,5 +1,5 @@
 class Claim < ActiveRecord::Base
-  attr_accessible :birth, :claimmoney, :duration, :mothersname, :name, :salary
+  attr_accessible :birth, :claimmoney, :duration, :mothersname, :name, :salary, :mortgage
 
   VALID_NAME_REGEX = /\A([A-Z]\w+)( [A-Z]\w+)+\z/i
   validates :name, presence: true, length: {maximum: 50}, format: {with: VALID_NAME_REGEX}

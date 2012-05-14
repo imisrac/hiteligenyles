@@ -1,1 +1,15 @@
-<%= @claim.name %>, <%= @claim.salary %>
+<% provide(:title, "Visszajelzes") %>
+<h1>Adatok</h1>
+
+<div class="container hero-unit">
+  <ul>
+    <li>Név: <%= @claim.name %></li>
+    <li>Anyja neve: <%= @claim.mothersname %></li>
+    <li>Születési idő: <%= @claim.birth %></li>
+    <li>Fizetés: <%= @claim.salary %> HUF/hó</li>
+    <li>Igényelt összeg: <%= @claim.claimmoney %> HUF</li>
+    <li>Futamidő: <%= @claim.duration %> hónap</li>
+    <li>Nem jelzálog</li>
+    <li><h3>Törlesztő részlet: <%= (@claim.claimmoney)/(@claim.duration) %> HUF/hó</h3></li>
+  </ul>
+</div>

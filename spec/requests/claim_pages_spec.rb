@@ -24,12 +24,13 @@ describe "Claim pages" do
 
     describe "with valid information" do
       before do
-        fill_in "Name", with: "Example User"
-        fill_in "Mothersname", with: "Mother Of Example"
-        fill_in "Birth", with: 20
-        fill_in "Salary", with: 200000
-        fill_in "Claimmoney", with: 10000000
-        fill_in "Duration", with: 120
+        fill_in :name, with: "Example User"
+        fill_in :mothersname, with: "Mother Example"
+        fill_in :birth, with: Date.today
+        fill_in :salary, with: 200000
+        fill_in :claimmoney, with: 10000000
+        fill_in :duration, with: 120
+        fill_in :mortgage, with: false
       end
 
       it "should create a claim" do

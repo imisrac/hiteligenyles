@@ -11,17 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120512224249) do
+ActiveRecord::Schema.define(:version => 20120513153431) do
 
   create_table "claims", :force => true do |t|
     t.string   "name"
     t.string   "mothersname"
-    t.integer  "birth"
+    t.date     "birth"
     t.integer  "salary"
     t.integer  "claimmoney"
     t.integer  "duration"
+    t.boolean  "mortgage"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "mortgages", :force => true do |t|
+    t.integer  "postcode"
+    t.string   "city"
+    t.string   "street"
+    t.integer  "number"
+    t.integer  "floor"
+    t.integer  "door"
+    t.integer  "value"
+    t.integer  "addincome"
+    t.integer  "addexpense"
+    t.boolean  "housemortgage"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
 end
